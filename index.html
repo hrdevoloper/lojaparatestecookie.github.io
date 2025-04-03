@@ -3,151 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Brilha</title>
+    <title>Página Simples</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #5a3e2b;
-            color: #fff;
             text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
         }
-        header {
-            background-color: #ff9800;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            height: 60px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .galeria-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: auto;
-            overflow: hidden;
-        }
-        .galeria-container img {
-            width: 100%;
-            display: none;
-            border-radius: 10px;
-        }
-        .galeria-container img.active {
-            display: block;
-        }
-        .produtos-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+        .container {
+            background: white;
             padding: 20px;
-        }
-        .produto {
-            background-color: #ffcc80;
-            padding: 15px;
             border-radius: 10px;
-            color: #000;
-            font-weight: bold;
-            width: 150px;
-            text-align: center;
-        }
-        footer {
-            background-color: #3e2723;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        .whatsapp-button {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            background-color: #25d366;
-            color: white;
-            padding: 15px;
-            border-radius: 50%;
-            font-size: 20px;
-            text-align: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            text-decoration: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="logo.jpg" alt="Cookie Brilha" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="galeria">
-        <h2>Galeria</h2>
-        <div class="galeria-container">
-            <img src="img1.jpg" alt="Cookie 1" class="active">
-            <img src="img2.jpg" alt="Cookie 2">
-            <img src="img3.jpg" alt="Cookie 3">
-            <img src="img4.jpg" alt="Cookie 4">
-        </div>
-    </section>
-    
-    <section id="produtos">
-        <h2>Produtos</h2>
-        <div class="produtos-container">
-            <div class="produto">Cookie de Chocolate</div>
-            <div class="produto">Cookie de Baunilha</div>
-            <div class="produto">Cookie Recheado</div>
-            <div class="produto">Cookie Integral</div>
-            <div class="produto">Cookie de Amendoim</div>
-            <div class="produto">Cookie com Nozes</div>
-            <div class="produto">Cookie Vegano</div>
-            <div class="produto">Cookie Tradicional</div>
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Cookie Brilha - Todos os direitos reservados</p>
-    </footer>
-    
-    <a href="https://wa.me/seunumerodetelefone" target="_blank" class="whatsapp-button">&#9742;</a>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const produtos = document.querySelectorAll(".produto");
-            produtos.forEach(produto => {
-                produto.addEventListener("click", function() {
-                    alert(`Você selecionou: ${this.textContent}`);
-                });
-            });
-            
-            let index = 0;
-            const imagens = document.querySelectorAll(".galeria-container img");
-            function trocarImagem() {
-                imagens.forEach(img => img.classList.remove("active"));
-                imagens[index].classList.add("active");
-                index = (index + 1) % imagens.length;
-            }
-            setInterval(trocarImagem, 5000);
-        });
-    </script>
+    <div class="container">
+        <h1>Bem-vindo!</h1>
+        <p>Esta é uma página HTML simples.</p>
+        <a href="https://www.google.com" target="_blank">Visite o Google</a>
+    </div>
 </body>
 </html>
